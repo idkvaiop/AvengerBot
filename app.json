@@ -69,9 +69,8 @@
 		"required":true
         },
 	"UPSTREAM_REPO":{
-		"description": "Do not change it",
+		"description": "Fill it with https://github.com/TeamAvengerBot/AvengerBot.git",
 		"required":true
-                "value": "https://github.com/TeamAvengerBot/AvengerBot.git"
 	}
     }
 }
