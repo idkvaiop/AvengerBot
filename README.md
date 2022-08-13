@@ -1,10 +1,5 @@
-<h1 align="center">
-    ✨ Avenger Bot ✨
-</h1>
+<p align="center"><img src="https://github-readme-stats.vercel.app/api/pin/?username=TeamAvengerBot&repo=AvengerBot&theme=dark" /></a></p>
 
-<h3 align="center">
-    Telegram Group Manager Bot Written In Python Using Pyrogram.
-</h3>
 <h4 align="center">
     :exclamation: Please star and fork this project before using it.
 </h4>
