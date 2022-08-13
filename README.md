@@ -1,0 +1,107 @@
+<h1 align="center">
+    ✨ Avenger Bot ✨
+</h1>
+
+<h3 align="center">
+    Telegram Group Manager Bot Written In Python Using Pyrogram.
+</h3>
+<h4 align="center">
+    :exclamation: Please star and fork this project before using it.
+</h4>
+
+<h3 align="center">
+    Ready to use method
+</h3>
+
+<p align="center">
+    A ready-to-use running instance of this bot can be found on Telegram <br>
+    <a href="https://t.me/OfficialsRobot"> Official </a>
+</p>
+
+<h2 align="center">
+   ⇝ Requirements ⇜
+</h2>
+
+<p align="center">
+    <a href="https://www.python.org/downloads/release/python-390/"> Python3.9 </a> |
+    <a href="https://docs.pyrogram.org/intro/setup#api-keys"> Telegram API Key </a> |
+    <a href="https://t.me/botfather"> Telegram Bot Token </a> |
+    <a href="https://telegra.ph/How-To-get-Mongodb-URI-04-06"> MongoDB URI </a>
+</p>
+
+<h2 align="center">
+   ⇝ Install Locally Or On A VPS ⇜
+</h2>
+
+```console
+git clone https://github.com/TeamAvengerBot/AvengerBot
+cd AvengerBot
+pip3 install -U -r requirements.txt
+cp sample_config.env config.env
+```
+
+<h3 align="center">
+    Edit <b>config.env</b> with your own values
+</h3>
+
+<h2 align="center">
+   ⇝ Run Directly ⇜
+</h2>
+
+```console
+python3 -m Avenger
+```
+<h1>
+    <p align="center">
+        <a href="https://heroku.com/deploy?template=https://github.com/TeamAvengerBot/AvengerBot">
+            <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
+        </a>
+    </p>
+</h1>
+
+<h1 align="center">
+   ⇝ Docker ⇜
+</h1>
+
+```console
+git clone https://github.com/TeamAvengerBot/AvengerBot
+cd AvengerBot
+cp sample_config.env config.env
+```
+
+<h3 align="center">
+    Edit <b> config.env </b> with your own values
+</h3>
+
+```console
+sudo docker build . -t Avenger
+sudo docker run Avenger
+```
+
+<h2 align="center">
+   ⇝ Write new modules ⇜
+</h2>
+
+```py
+# Add license text here, get it from below
+
+from Avenger import app # This is bot's client
+from pyrogram import filters # pyrogram filters
+...
+
+
+# For /help menu
+__MODULE__ = "Module Name"
+__HELP__ = "Module help message"
+
+
+@app.on_message(filters.command("start"))
+async def some_function(_, message):
+    await message.reply_text("I'm already up!!")
+
+# Many useful functions are in, Avenger/utils/, Avenger, and Avenger/core/
+```
+
+<h3 align="center">
+   And put that file in Avenger/modules/ restart and test your bot.
+</h3>
