@@ -59,6 +59,25 @@ python3 -m Avenger
     </p>
 </h1>
 
+## Mandatory Vars
+
+- These are the minimum required vars need to setup to make Avenger Bot functional.
+
+1. `API_ID` : Get it from my.telegram.org 
+2. `API_HASH`  : Get it from my.telegram.org 
+3. `BOT_TOKEN` : Get it from [@Botfather](http://t.me/BotFather) in Telegram
+4. `MONGO_URL` : Get it from mongo db website
+5. `LOG_GROUP_ID` : You'll need a Private Group ID for this. Supergroup Needed with id starting from -100 
+6. `SUDO_USERS_ID` : Sudo User id for making sudoers or you can put your own telegram Id.
+7. `OWNER_ID` : Your Owner ID for managing your bot.
+8. `GBAN_LOG_GROUP_ID` : You'll need a Private Group ID for this. Supergroup Needed with id starting from -100
+9. `MESSAGE_DUMP_CHAT` : You'll need a Private Group ID for this. Supergroup Needed with id starting from -100
+10. `WELCOME_DELAY_KICK_SEC` : Fill 300 in this var section
+11. `ARQ_API_URL` : Fill http://arq.hamker.dev
+13. `ARQ_API_KEY` : Get it from @ARQRobot by typing /get_key
+14. `RSS_DELAY` : Fill 300 in this var section
+15. `UPSTREAM_REPO` : Fill https://github.com/TeamAvengerBot/AvengerBot.git
+
 <h1 align="center">
    ⇝ Docker ⇜
 </h1>
