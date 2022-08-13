@@ -9,14 +9,21 @@
     :exclamation: Please star and fork this project before using it.
 </h4>
 
-<h3 align="center">
-    Ready to use method
-</h3>
+#
 
 <p align="center">
-    A ready-to-use running instance of this bot can be found on Telegram <br>
-    <a href="https://t.me/OfficialsRobot"> Official </a>
+<a href="https://github.com/TeamAvengerBot/AvengerBot/network/members"><img src="https://img.shields.io/github/forks/TeamAvengerBot/AvengerBot?style=social" />
+<a href="https://github.com/TeamAvengerBot/AvengerBot"><img src="https://img.shields.io/github/stars/TeamAvengerBot/AvengerBot?style=social" />
+<a href="https://github.com/TeamAvengerBot/AvengerBot"><img src="https://img.shields.io/github/watchers/TeamAvengerBot/AvengerBot?style=social" />
+<a href="https://github.com/TeamAvengerBot/AvengerBot"><img src="https://img.shields.io/github/repo-size/TeamAvengerBot/AvengerBot?style=social&logo=github" />
+<a href="https://github.com/TeamAvengerBot/AvengerBot/commits/mukesh"><img src="https://img.shields.io/github/last-commit/TeamAvengerBot/AvengerBot?style=social&logo=github" />
+<a href="https://github.com/TeamAvengerBot/AvengerBot/issues"><img src="https://img.shields.io/github/issues/TeamAvengerBot/AvengerBot?style=social&logo=github" />
+<a href="https://app.codacy.com/project/badge/Grade/33ac0deeb7b14a028cf6bd574999abeb"><img src="https://img.shields.io/codacy/grade/33ac0deeb7b14a028cf6bd574999abeb?color=gold&logo=github&style=social" />
+<a href="https://github.com/TeamAvengerBot/AvengerBot/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=social&logo=github" />
+<a href="https://gitHub.com/TeamAvengerBot/AvengerBot/graphs/commit-activity"><img src="https://img.shields.io/badge/Maintained-yes-green.svg?style=social&logo=github" />
 </p>
+
+#
 
 <h2 align="center">
    ⇝ Requirements ⇜
@@ -28,6 +35,8 @@
     <a href="https://t.me/botfather"> Telegram Bot Token </a> |
     <a href="https://telegra.ph/How-To-get-Mongodb-URI-04-06"> MongoDB URI </a>
 </p>
+
+#
 
 <h2 align="center">
    ⇝ Install Locally Or On A VPS ⇜
