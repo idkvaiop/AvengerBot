@@ -129,4 +129,6 @@ async def some_function(_, message):
    And put that file in Avenger/modules/ restart and test your bot.
 </h3>
 
-All the credit goes to https://github.com/rozari0
+All the credit goes to 
+https://github.com/rozari0
+https://github.com/TheHamkerCat
