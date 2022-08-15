@@ -6,7 +6,7 @@ from Avenger.core.sections import section
 
 @app.on_message(
     filters.command("arq")
-    & ~filters.edited
+    & ~filters.private
 )
 async def arq_stats(_, message):
     data = await arq.stats()
