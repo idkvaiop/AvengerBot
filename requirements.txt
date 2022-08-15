@@ -25,4 +25,3 @@ img2pdf
 telegraph
 jikanpy
 cinemagoer
-telethon
