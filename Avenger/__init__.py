@@ -3,6 +3,9 @@ import time
 from inspect import getfullargspec
 from os import path
 
+from telethon import TelegramClient
+from telethon.sessions import StringSession
+from telethon.sessions import MemorySession
 from aiohttp import ClientSession
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
 from pyrogram import Client
@@ -27,6 +30,7 @@ print("[AVENGER]: INITIALIZING DATABASE")
 mongo_client = MongoClient(MONGO_URL)
 db = mongo_client.avenger
 
+telethn = TelegramClient(MemorySession(), API_ID, API_HASH)
 
 async def load_sudoers():
     global SUDOERS
