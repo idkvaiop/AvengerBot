@@ -20,7 +20,7 @@ from Avenger.utils.functions import (
     time_converter,
 )
 
-__MODULE__ = "Aᴅᴍɪɴ"
+__MODULE__ = "Admin"
 __HELP__ = """/ban - Ban A User
 /dban - Delete the replied message banning its sender
 /tban - Ban A User For Specific Time
