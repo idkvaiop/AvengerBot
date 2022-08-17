@@ -73,10 +73,10 @@ async def inline_help_func(__HELP__):
             reply_markup=buttons,
         ),
         InlineQueryResultArticle(
-            title="Github Repo",
-            description="Get Github Respository Of Bot.",
+            title="Radion Server",
+            description="Radion Server",
             input_message_content=InputTextMessageContent(
-                "https://github.com/TeamAvengerBot/AvengerBot"
+                "https://t.me/RADIONSERVER"
             ),
             thumb_url="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
         ),
@@ -96,18 +96,19 @@ async def alive_function(answers):
     )
 
     msg = f"""
-**[{BOT_NAME}](https://github.com/TeamAvengerBot/AvengerBot):**
+**{BOT_NAME}:**
 **MainBot:** `{bot_state}`
 **Python:** `{pyver.split()[0]}`
 **Pyrogram:** `{pyrover}`
 **MongoDB:** `{mongover}`
 **Platform:** `{sys.platform}`
+**Creator:** [Akhil](t.me/akhilprs)
 """
     answers.append(
         InlineQueryResultArticle(
             title="Alive",
             description="Check Bot's Stats",
-            thumb_url="https://telegra.ph/file/e26d99eeeb83f631bd634.jpg",
+            thumb_url="https://te.legra.ph/file/82c65190c258e7fa1440c.jpg",
             input_message_content=InputTextMessageContent(
                 msg, disable_web_page_preview=True
             ),
