@@ -76,22 +76,22 @@ home_keyboard_pm = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                text="🖱️ ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅꜱ 🖱️", callback_data="bot_commands"
+                text="All Commands", callback_data="bot_commands"
             ),
         ],
         [
             InlineKeyboardButton(
-                text="🖱️ ꜱʏꜱ ꜱᴛᴀᴛꜱ 🖱️",
+                text="Stats",
                 callback_data="stats_callback",
             ),
             InlineKeyboardButton(
-                text="🖱️ ꜱᴏᴜʀᴄᴇ 🖱️",
-                url="https://github.com/TeamAvengerBot/AvengerBot",
+                text="Radion Server",
+                url="https://t.me/RADIONSERVER",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕",
+                text="➕ Add me to your Group ➕",
                 url=f"http://t.me/{BOT_USERNAME}?startgroup=new",
             )
         ],
@@ -100,8 +100,8 @@ home_keyboard_pm = InlineKeyboardMarkup(
 
 home_text_pm = (
     f"Hey there! My name is {BOT_NAME}. I can manage your "
-    + "group with lots of useful features, feel free to "
-    + "add me to your group."
+    + "group with lots of useful features..!!! "
+    + "If you are searching for the safest bot, Akira is the right option for you."
 )
 
 
@@ -109,17 +109,17 @@ keyboard = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                text="Help ❓",
+                text="♓ Help ♓",
                 url=f"t.me/{BOT_USERNAME}?start=help",
             ),
             InlineKeyboardButton(
-                text="Repo 🛠",
-                url="https://github.com/TeamAvengerBot/AvengerBot",
+                text="⚡ Creator ⚡",
+                url="https://t.me/akhilprs",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="System Stats 💻",
+                text="💻 System Stats 💻",
                 callback_data="stats_callback",
             ),
         ],
@@ -131,7 +131,7 @@ keyboard = InlineKeyboardMarkup(
 async def start(_, message):
     if message.chat.type != enums.ChatType.PRIVATE:
         return await message.reply_photo(
-            photo="https://telegra.ph/file/c8b856ce746e6d698e7a7.jpg",
+            photo="https://te.legra.ph/file/82c65190c258e7fa1440c.jpg",
             caption="Pm Me For More Details.",
             reply_markup=keyboard,
         )
@@ -156,7 +156,7 @@ async def start(_, message):
             )
     else:
         await message.reply_photo(
-            photo="https://telegra.ph/file/c8b856ce746e6d698e7a7.jpg",
+            photo="https://te.legra.ph/file/82c65190c258e7fa1440c.jpg",
             caption=home_text_pm,
             reply_markup=home_keyboard_pm,
         )
