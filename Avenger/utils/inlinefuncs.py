@@ -55,7 +55,7 @@ keywords_list = [
 
 
 async def inline_help_func(__HELP__):
-    buttons = InlineKeyboard(row_width=4)
+    buttons = InlineKeyboard(row_width=3)
     buttons.add(
         *[
             (InlineKeyboardButton(text=i, switch_inline_query_current_chat=i))
@@ -73,10 +73,10 @@ async def inline_help_func(__HELP__):
             reply_markup=buttons,
         ),
         InlineQueryResultArticle(
-            title="Radion Server",
-            description="Radion Server",
+            title="Update",
+            description="My Update Channel",
             input_message_content=InputTextMessageContent(
-                "https://t.me/RADIONSERVER"
+                "https://t.me/THERADION"
             ),
             thumb_url="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
         ),
@@ -102,7 +102,7 @@ async def alive_function(answers):
 **Pyrogram:** `{pyrover}`
 **MongoDB:** `{mongover}`
 **Platform:** `{sys.platform}`
-**Creator:** [Akhil](t.me/akhilprs)
+**Creator:** [Akhil Parmar](t.me/akhilprs)
 """
     answers.append(
         InlineQueryResultArticle(
