@@ -82,10 +82,7 @@ home_keyboard_pm = InlineKeyboardMarkup(
         [
             InlineKeyboardButton(
                 text="Help", callback_data="bot_commands",
-            ),
-            InlineKeyboardButton(
-                text="Info", callback_data="akira_info",
-            ),
+           ),
         ],
         [
             InlineKeyboardButton(
@@ -250,23 +247,10 @@ async def commands_callbacc(_, CallbackQuery):
 
     await CallbackQuery.message.delete()
 
-
-@app.on_callback_query(filters.regex("akira_info"))
+@app.on_callback_query(filters.regex("stats_callback"))
 async def stats_callbacc(_, CallbackQuery):
-    text = """
-Hey !
-I am **Akira** !
-I am a Super Powerful Group Management Bot to manage your groups..!!!
-
-𝗦𝗼𝗺𝗲 𝗼𝗳 𝘁𝗵𝗲 𝗡𝗼𝘁𝗮𝗯𝗹𝗲 𝗔𝗯𝗶𝗹𝗶𝘁𝗶𝗲𝘀 𝗼𝗳 𝗔𝗸𝗶𝗿𝗮 :
-
-✪ Music Player.
-✪ Fast and Responsive.
-✪ Quotely.
-✪ Shippering.
-✪ AI Based Modules.
-"""
-    await CallbackQuery.message.delete()
+    text = await bot_sys_stats()
+    await app.answer_callback_query(CallbackQuery.id, text, show_alert=True)
 
 
 @app.on_callback_query(filters.regex(r"help_(.*?)"))
