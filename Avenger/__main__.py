@@ -256,7 +256,7 @@ async def commands_callbacc(_, CallbackQuery):
 @app.on_callback_query(filters.regex("akira_info"))
 async def stats_callbacc(_, CallbackQuery):
     text = """
-Hey {query.from_user.first_name} !
+Hey !
 I am **Akira** !
 I am a Super Powerful Group Management Bot to manage your groups..!!!
 
