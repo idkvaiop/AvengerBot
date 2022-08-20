@@ -119,7 +119,7 @@ keyboard = InlineKeyboardMarkup(
             ),
             InlineKeyboardButton(
                 text="Stats",
-                callback _data=stats_callback",
+                callback_data=stats_callback",
             ),
         ],
         [
