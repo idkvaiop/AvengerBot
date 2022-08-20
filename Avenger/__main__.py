@@ -253,10 +253,22 @@ async def commands_callbacc(_, CallbackQuery):
     await CallbackQuery.message.delete()
 
 
-@app.on_callback_query(filters.regex("stats_callback"))
+@app.on_callback_query(filters.regex("akira_info"))
 async def stats_callbacc(_, CallbackQuery):
-    text = await bot_sys_stats()
-    await app.answer_callback_query(CallbackQuery.id, text, show_alert=True)
+    text = """
+Hey {query.from_user.first_name} !
+I am **Akira** !
+I am a Super Powerful Group Management Bot to manage your groups..!!!
+
+𝗦𝗼𝗺𝗲 𝗼𝗳 𝘁𝗵𝗲 𝗡𝗼𝘁𝗮𝗯𝗹𝗲 𝗔𝗯𝗶𝗹𝗶𝘁𝗶𝗲𝘀 𝗼𝗳 𝗔𝗸𝗶𝗿𝗮 :
+
+✪ Music Player.
+✪ Fast and Responsive.
+✪ Quotely.
+✪ Shippering.
+✪ AI Based Modules.
+"""
+    await CallbackQuery.message.delete()
 
 
 @app.on_callback_query(filters.regex(r"help_(.*?)"))
