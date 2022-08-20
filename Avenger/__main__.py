@@ -76,32 +76,39 @@ home_keyboard_pm = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                text="All Commands", callback_data="bot_commands"
+                text="Add Me To Serve You!", url=f"http://t.me/{BOT_USERNAME}?startgroup=new"
             ),
         ],
         [
             InlineKeyboardButton(
-                text="Stats",
-                callback_data="stats_callback",
+                text="Help",
+                callback_data="bot_commands",
             ),
             InlineKeyboardButton(
-                text="Radion Server",
-                url="https://t.me/RADIONSERVER",
+                text="Info",
+                callback_data="akira_info",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="➕ Add me to your Group ➕",
-                url=f"http://t.me/{BOT_USERNAME}?startgroup=new",
-            )
+                text="Updates",
+                url="t.me/THERADION",
+            ),
+            InlineKeyboardButton(
+                text="Support",
+                url="t.me/RADIONSUPPORT",
+            ),
+        
         ],
     ]
 )
 
 home_text_pm = (
-    f"Hey there! My name is {BOT_NAME}. I can manage your "
-    + "group with lots of useful features..!!! "
+    f"Hey! I am [**Akira**](https://telegra.ph/file/2079b686ea131a7bda2cd.jpg)."
+    + "I can manage your group with lots of useful features..!!! "
     + "If you are searching for the safest bot, Akira is the right option for you."
+    + "☆━━━━━━━━━━━━━━━━☆ "
+    + "__I have all basic Admin Modules And All Advanced Modules to suite all your needs... Give me a chance I promise no one can defeat my features.__"
 )
 
 
@@ -109,18 +116,18 @@ keyboard = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                text="♓ Help ♓",
-                url=f"t.me/{BOT_USERNAME}?start=help",
+                text="Help",
+                callback_data=bot_commands",
             ),
             InlineKeyboardButton(
-                text="⚡ Creator ⚡",
-                url="https://t.me/akhilprs",
+                text="Stats",
+                callback _data=stats_callback",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="💻 System Stats 💻",
-                callback_data="stats_callback",
+                text="My Creator",
+                url="t.me/akhilprs",
             ),
         ],
     ]
@@ -131,8 +138,8 @@ keyboard = InlineKeyboardMarkup(
 async def start(_, message):
     if message.chat.type != enums.ChatType.PRIVATE:
         return await message.reply_photo(
-            photo="https://te.legra.ph/file/82c65190c258e7fa1440c.jpg",
-            caption="Pm Me For More Details.",
+            photo="https://telegra.ph/file/2079b686ea131a7bda2cd.jpg",
+            caption="PM Me for more detailed information.",
             reply_markup=keyboard,
         )
     if len(message.text.split()) > 1:
@@ -156,7 +163,7 @@ async def start(_, message):
             )
     else:
         await message.reply_photo(
-            photo="https://te.legra.ph/file/82c65190c258e7fa1440c.jpg",
+            photo="https://telegra.ph/file/2079b686ea131a7bda2cd.jpg",
             caption=home_text_pm,
             reply_markup=home_keyboard_pm,
         )
@@ -220,10 +227,12 @@ async def help_parser(name, keyboard=None):
     if not keyboard:
         keyboard = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help"))
     return (
-        """Hello {first_name}, My name is {bot_name}.
+        """Hey {first_name}, I am {bot_name} !
 I'm a group management bot with some useful features.
-You can choose an option below, by clicking a button.
-Also you can ask anything in Support Group.
+
+I am less stress free to setup and can manage your groups hassle free without
+giving you much load...!!!
+If you face any problem, make sure to connect with us at @RADIONSUPPORT.
 """.format(
             first_name=name,
             bot_name=BOT_NAME,
@@ -261,11 +270,10 @@ async def help_button(client, query):
     top_text = f"""
 Hello {query.from_user.first_name}, My name is {BOT_NAME}.
 I'm a group management bot with some usefule features.
-You can choose an option below, by clicking a button.
-Also you can ask anything in Support Group.
-General command are:
- - /start: Start the bot
- - /help: Give this message
+
+I am less stress free to setup and can manage your groups hassle free without
+giving you much load...!!!
+If you face any problem, make sure to connect with us at @RADIONSUPPORT.
  """
     if mod_match:
         module = mod_match.group(1)
