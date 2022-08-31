@@ -316,7 +316,7 @@ async def promoteFunc(_, message: Message):
             can_manage_chat=bot.can_manage_chat,
             can_manage_voice_chats=bot.can_manage_voice_chats,
         )
-        return await message.reply_text(f"Fully Promoted! {umention}")
+        return await message.reply_text(f"Fully Promoted! {umention}... Enjoy !")
 
     await message.chat.promote_member(
         user_id=user_id,
@@ -359,7 +359,7 @@ async def demote(_, message: Message):
         can_manage_voice_chats=False,
     )
     umention = (await app.get_users(user_id)).mention
-    await message.reply_text(f"Demoted! {umention}")
+    await message.reply_text(f"Demoted! {umention}... Go Below !")
 
 
 # Pin Messages
@@ -407,7 +407,7 @@ async def mute(_, message: Message):
             "I can't mute an admin, You know the rules, so do i."
         )
     mention = (await app.get_users(user_id)).mention
-    keyboard = ikb({"🚨   Unmute   🚨": f"unmute_{user_id}"})
+    keyboard = ikb({"❌ Unmute ❌": f"unmute_{user_id}"})
     msg = (
         f"**Muted User:** {mention}\n"
         f"**Muted By:** {message.from_user.mention if message.from_user else 'Anon'}\n"
@@ -503,14 +503,14 @@ async def warn_user(_, message: Message):
         get_warn(chat_id, await int_to_alpha(user_id)),
     )
     mention = user.mention
-    keyboard = ikb({"🚨  Remove Warn  🚨": f"unwarn_{user_id}"})
+    keyboard = ikb({"❌ Remove Warn ❌": f"unwarn_{user_id}"})
     warns = warns["warns"] if warns else 0
     if message.command[0][0] == "d":
         await message.reply_to_message.delete()
     if warns >= 2:
         await message.chat.ban_member(user_id)
         await message.reply_text(
-            f"Number of warns of {mention} exceeded, BANNED!"
+            f"Number of warns of {mention} exceeded, now go, Banned !"
         )
         await remove_warns(chat_id, await int_to_alpha(user_id))
     else:
