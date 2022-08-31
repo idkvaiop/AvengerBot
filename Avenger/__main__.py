@@ -122,7 +122,7 @@ keyboard = InlineKeyboardMarkup(
         [
             InlineKeyboardButton(
                 text="My Creator",
-                url="t.me/akhilprs",
+                url="tg://user?id={2102783671}",
             ),
         ],
     ]
