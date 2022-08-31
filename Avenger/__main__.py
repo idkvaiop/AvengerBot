@@ -122,7 +122,7 @@ keyboard = InlineKeyboardMarkup(
         [
             InlineKeyboardButton(
                 text="My Creator",
-                url="tg://user?id={2102783671}",
+                url="tg://openmessage?user_id=2102783671",
             ),
         ],
     ]
