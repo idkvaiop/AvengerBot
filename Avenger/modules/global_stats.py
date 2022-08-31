@@ -95,22 +95,21 @@ async def global_stats(_, message):
     groups_ub = channels_ub = bots_ub = privates_ub = total_ub = 0
 
     msg = f"""
-**▬▬「ɢʟᴏʙᴀʟ ꜱᴛᴀᴛꜱ」▬▬**
-**ᴛᴏᴛᴀʟ ᴍᴏᴅᴜʟᴇꜱ** : {modules_count}
-**ɪɴʟɪɴᴇ ᴍᴏᴅᴜʟᴇꜱ** : {len(keywords_list)}
-**ᴛᴏᴛᴀʟ ᴜꜱᴇʀꜱ** : {served_users}
-**ᴛᴏᴛᴀʟ ᴄʜᴀᴛꜱ** : {served_chats}
-**ᴛᴏᴛᴀʟ ɴᴏᴛᴇꜱ** : {notes_count}
-**ᴛᴏᴛᴀʟ ꜰɪʟᴛᴇʀ** : {filters_count}
-**ᴛᴏᴛᴀʟ ᴡᴀʀɴꜱ** : {warns_count}
-**ᴛᴏᴛᴀʟ ᴋᴀʀᴍᴀ** : {karmas_count}
-**ᴛᴏᴛᴀʟ ɢʙᴀɴꜱ** : {gbans}
-**ʀꜱꜱ ꜰᴇᴇᴅꜱ** : {rss_count}
-**ʙʟᴀᴄᴋʟɪꜱᴛ ꜰɪʟᴛᴇʀ** : {blacklist_filters_count}
-**ᴅᴇᴠ ᴜꜱᴇʀꜱ** : {developers}
-**ʀᴇᴘᴏ ᴄᴏᴍᴍɪᴛꜱ** : {commits}
-**▬▬「ɢʟᴏʙᴀʟ ꜱᴛᴀᴛꜱ」▬▬**
-       ▬▬▬▬▬▬▬
-       ▬▬▬▬▬▬▬
+** Akira Global Status **
+**Total Modules** : {modules_count}
+**Inline Modules** : {len(keywords_list)}
+**Total Users** : {served_users}
+**Total Chats** : {served_chats}
+**Total Notes** : {notes_count}
+**Total Filters** : {filters_count}
+**Total Warns** : {warns_count}
+**Total Karma** : {karmas_count}
+**Total Gbans** : {gbans}
+**RSS Feeds** : {rss_count}
+**Blacklisted** : {blacklist_filters_count}
+**Devs** : {developers}
+**Creator** : [Akhil 🇮🇳](tg://user?id={2102783671})
+
+© @THERADION
 """
     await m.edit(msg, disable_web_page_preview=True)
